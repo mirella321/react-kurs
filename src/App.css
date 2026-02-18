@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2e1b36;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #dce6e8;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+h1{
+  color:#715c70
+}
+/* ctrl c- zatrzymujemy aplikacje*/
+/* npm i pozwoli pobarć z github*/
