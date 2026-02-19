@@ -5,4 +5,8 @@ h3{
 
 a.news {
     text-decoration: none;
+    color: azure;
+}
+a.news:active{
+    color: plum;
 }

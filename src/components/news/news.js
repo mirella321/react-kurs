@@ -25,13 +25,19 @@ export function News({ title, description }) {
     }
   }, [likes]);
 
+  const createSlug = (title) => {
+    return title.replace(/\s/g,"-");
+  }
+
   return (
-    <Link className="news" to="/news/slug">
+    <div>
+    <Link className="news" to={`/news/${createSlug(title)}`}>
       <h3>{title}</h3>
       <p>{description}</p>
       <span>{likes}</span>
       <button onClick={(e) => changeLikes(1, e)}>LIKE</button>
       <button onClick={(e) => changeLikes(-1, e)}>DISLIKE </button>
     </Link>
+    </div>
   );
 }
