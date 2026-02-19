@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./nav.css";
 
 export function Nav() {
@@ -31,10 +31,14 @@ export function Nav() {
         <ul>
           {navLinks.map((link, index) => (
             <li key={index}>
-              <Link to={link.path}>
+                <NavLink
+                    to={link.path}
+                    className={({isActive}) => isActive ? "active" : "non-active"}
+                >
+                
                 <i class={link.icon}></i>
                 {link.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

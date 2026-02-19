@@ -38,4 +38,25 @@ ul > li {
     align-items: center;
     gap:0.5rem;
     color: white;
+    text-decoration: none;
   }
+  ul >li >a {
+    position: relative;
+    text-decoration: none;
+  }
+
+
+  ul >li >a.active {
+    color: greenyellow;
+    border-bottom: 6px solid rgb(66, 224, 38);
+  }
+  ul >li> a.active::after{
+    position: absolute;
+    left: 0;
+    bottom: -4;
+    width: 100%;
+    background-color: greenyellow;
+    border-radius: 5px;
+
+  }
+  
