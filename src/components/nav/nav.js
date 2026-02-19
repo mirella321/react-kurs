@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./nav.css";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export function Nav() {
+  const { theme, toogleTheme } = useContext(ThemeContext);
   const navLinks = [
     {
       path: "/",
@@ -24,18 +27,30 @@ export function Nav() {
   };
   {
     return (
-      <nav>
+      <nav className={theme}>
         <span>
           <i class="fa-brands fa-bitcoin"></i>
         </span>
         <ul>
+          <li>{theme}
+            <button className="theme-btn" onClick={toogleTheme}>
+                {theme === "light" ? (
+                    <i className="fa-solid fa-moon"></i>
+                ) : (
+                        <i className="fa-solid fa-sun"></i>
+                    )
+                }
+            </button>
+          </li>
+
           {navLinks.map((link, index) => (
             <li key={index}>
-                <NavLink
-                    to={link.path}
-                    className={({isActive}) => isActive ? "active" : "non-active"}
-                >
-                
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  isActive ? "active" : "non-active"
+                }
+              >
                 <i class={link.icon}></i>
                 {link.name}
               </NavLink>

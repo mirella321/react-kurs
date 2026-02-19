@@ -7,10 +7,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Users } from './pages/dashboard/users/users';
 import { NewsDetails } from './pages/newsDetails/newsDetails';
+import { ThemeContext, ThemeProvider } from './context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ThemeProvider>
+
     <BrowserRouter>
     <Nav/>
     <Routes>
@@ -20,5 +23,7 @@ root.render(
       <Route path="/news/:slug" element={<NewsDetails/>}></Route>
     </Routes>
     </BrowserRouter>
+    
+    </ThemeProvider>
   </React.StrictMode>
 );
