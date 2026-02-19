@@ -63,7 +63,13 @@ ul > li {
   nav.light > a> span , nav.light > ul >li > a{
     color: rgb(21, 21, 57);
   }
+  nav.light a > i,
+  nav.light a,
   nav.light .theme-btn{
-    background-color: rgb(21, 21, 57);
+    color: black;
   }
+  nav.light{
+    background-color: lightblue;
+  }
+
   

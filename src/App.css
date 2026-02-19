@@ -48,9 +48,11 @@
     #b91747
   );
   background-size: 300%;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 6s infinite linear;
+}
+.h1-animation.dark{
+  background-color: wheat;
 }
 
 @keyframes gradientShift {
@@ -91,11 +93,19 @@ main{
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ebd7ed;
-  height: 200vh;
 }
 body{
   padding-top: 150px;
+}
+div.light,
+div.dark {
+  background-color: #1b1b30;
+  padding-right: 4rem;
+  padding-left: 4em;
+  padding-top: 120px;
+}
+div.light{
+  background-color: #dce6e8;
 }
 /* ctrl c- zatrzymujemy aplikacje*/
 /* npm i pozwoli pobarć z github*/
