@@ -36,8 +36,71 @@
     transform: rotate(360deg);
   }
 }
-h1{
-  color:#715c70
+.h1-animation {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #8d6bba,
+    #6e2090,
+    #bf94e5,
+    #ff04cd,
+    #b91747
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s infinite linear;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+button{
+  padding: 14px 32px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline;
+  margin-left: 5px;
+  background-color: #b91747;
+  opacity: 80%;
+}
+button:first-of-type{
+  background-color: #9ae276;
+}
+button:active{
+  opacity: 100%;
+  transform: scale(105%);
+}
+main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ebd7ed;
+  height: 200vh;
+}
+body{
+  padding-top: 150px;
 }
 /* ctrl c- zatrzymujemy aplikacje*/
 /* npm i pozwoli pobarć z github*/
+/*
+git add .- dodawanie zmian
+git status- sprawdzanie czy sie dodało
+git commit -m
+*/

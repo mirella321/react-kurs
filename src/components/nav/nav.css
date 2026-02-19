@@ -1,0 +1,33 @@
+
+nav{
+    position:fixed;
+    z-index: 3;
+    background-color: rgb(65, 19, 108);
+    left: 0;
+    right: 0;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    opacity: 80%;
+}
+ul{
+     display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1.25rem;
+  color: white;
+}
+ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;}
+  
+  span{
+    color: rgb(255, 255, 255);
+    transform: scale(500%);
+    margin-left: 30px;
+  }
