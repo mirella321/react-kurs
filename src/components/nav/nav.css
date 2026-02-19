@@ -31,3 +31,11 @@ ul > li {
     transform: scale(500%);
     margin-left: 30px;
   }
+  ul > li, ul >li >a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    color: white;
+  }
