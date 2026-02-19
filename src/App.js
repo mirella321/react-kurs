@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import {News} from "./components/news/news"
+import { Link } from "react-router-dom";
 function App() 
 {
   const name = "Mirella";

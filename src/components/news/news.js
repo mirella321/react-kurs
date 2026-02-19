@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./news.css";
+import { Link } from "react-router-dom";
 
 export function News({ title, description }) {
   const [likes, setLikes] = useState(0);
@@ -8,7 +9,9 @@ export function News({ title, description }) {
     alert(`${name}, kliknięto przycisk`);
   };
 
-  const changeLikes = (value) => {
+  const changeLikes = (value, e) => {
+    e.preventDefault();
+
     if (likes < 1 && value < 0) {
       return;
     }
@@ -23,14 +26,12 @@ export function News({ title, description }) {
   }, [likes]);
 
   return (
-    <div className="news">
+    <Link className="news" to="/news/slug">
       <h3>{title}</h3>
       <p>{description}</p>
       <span>{likes}</span>
-      <button onClick={() => changeLikes(1)}>LIKE</button>
-      <button onClick={() => changeLikes(-1)}>DISLIKE</button>
-    </div>
+      <button onClick={(e) => changeLikes(1, e)}>LIKE</button>
+      <button onClick={(e) => changeLikes(-1, e)}>DISLIKE </button>
+    </Link>
   );
 }
-
-
