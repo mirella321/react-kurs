@@ -18,6 +18,5 @@ root.render(
       <Route path="/users" element={<Users/>}></Route>
     </Routes>
     </BrowserRouter>
-    <App />
   </React.StrictMode>
 );
